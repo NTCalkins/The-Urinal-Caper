@@ -559,6 +559,7 @@ SPR 10
 00101111
 00101111
 NAME lounge_doormat_left
+DLG l
 POS 3 10,15
 
 SPR 11
@@ -571,6 +572,7 @@ SPR 11
 11110100
 11110100
 NAME lounge_doormat_right
+DLG m
 POS 3 11,15
 
 SPR A
@@ -703,6 +705,7 @@ SPR g
 00000000
 11111111
 00000000
+NAME blackboard
 DLG a
 POS 2 8,3
 
@@ -803,6 +806,7 @@ SPR m
 00001011
 00001011
 NAME bathroom_doormat_top
+DLG b
 POS 0 15,8
 
 SPR n
@@ -815,6 +819,7 @@ SPR n
 00000000
 00000000
 NAME bathroom_doormat_bottom
+DLG c
 POS 0 15,9
 
 SPR o
@@ -827,6 +832,7 @@ SPR o
 00001011
 00001011
 NAME to_classroom_doormat_top
+DLG f
 POS 1 15,8
 
 SPR p
@@ -839,6 +845,7 @@ SPR p
 00000000
 00000000
 NAME to_classroom_doormat_bottom
+DLG g
 POS 1 15,9
 
 SPR q
@@ -875,6 +882,7 @@ SPR s
 11010000
 11010000
 NAME to_bathroom_doormat_top
+DLG d
 POS 1 0,8
 
 SPR t
@@ -887,6 +895,7 @@ SPR t
 00000000
 00000000
 NAME to_bathroom_doormat_bottom
+DLG e
 POS 1 0,9
 
 SPR u
@@ -899,6 +908,7 @@ SPR u
 00000000
 00000000
 NAME to_lounge_doormat_left
+DLG h
 POS 1 5,0
 
 SPR v
@@ -911,6 +921,7 @@ SPR v
 00000000
 00000000
 NAME to_lounge_doormat_right
+DLG i
 POS 1 6,0
 
 SPR w
@@ -947,6 +958,7 @@ SPR y
 11010000
 11010000
 NAME classroom_doormat_top
+DLG j
 POS 2 0,7
 
 SPR z
@@ -959,6 +971,7 @@ SPR z
 00000000
 00000000
 NAME classroom_doormat_bottom
+DLG k
 POS 2 0,8
 
 ITM 2
@@ -1018,6 +1031,54 @@ It's a note from Mr. Smith. It reads:
 "Won't be here today: be nice to the substitute teacher, Mr. Johnson"
 """
 NAME sprite g dialog
+
+DLG b
+{exit "1" 1 8}
+NAME bathroom_doormat_top dialog
+
+DLG c
+{exit "1" 1 9}
+NAME bathroom_doormat_bottom dialog
+
+DLG d
+{exit "0" 14 8}
+NAME to_bathroom_doormat_top dialog
+
+DLG e
+{exit "0" 14 9}
+NAME to_bathroom_doormat_bottom dialog
+
+DLG f
+{exit "2" 1 7}
+NAME to_classroom_doormat_top dialog
+
+DLG g
+{exit "2" 1 8}
+NAME to_classroom_doormat_bottom dialog
+
+DLG h
+{exit "3" 10 14}
+NAME to_lounge_doormat_left dialog
+
+DLG i
+{exit "3" 11 14}
+NAME to_lounge_doormat_right dialog
+
+DLG j
+{exit "1" 14 8}
+NAME classroom_doormat_top dialog
+
+DLG k
+{exit "1" 14 9}
+NAME classroom_doormat_bottom dialog
+
+DLG l
+{exit "1" 5 1}
+NAME lounge_doormat_left dialog
+
+DLG m
+{exit "1" 6 1}
+NAME lounge_doormat_right dialog
 
 VAR a
 42
@@ -9949,7 +10010,6 @@ CHAR 255
 010010
 000000
 000000
-</script>
 </script>
 
 </head>
