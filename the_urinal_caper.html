@@ -105,20 +105,20 @@ PAL 0
 ROOM 4
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,c,c,c,c,c,c,c,c,c,c,c,c,0,0
+0,0,c,0,14,0,14,0,14,0,14,0,0,c,0,0
+0,0,c,0,14,0,14,0,14,0,14,0,15,c,0,0
+0,0,c,0,0,0,0,0,0,0,0,0,15,c,0,0
+0,0,c,0,0,0,0,0,0,0,0,15,0,c,0,0
+0,0,c,0,0,0,0,0,0,15,0,0,0,c,0,0
+0,0,c,0,0,0,0,0,0,0,0,0,0,c,0,0
+0,0,c,0,0,0,0,0,0,0,0,0,0,c,0,0
+0,0,c,0,0,0,0,0,0,0,0,0,0,c,0,0
+0,0,c,0,0,0,0,0,0,0,0,0,0,c,0,0
+0,0,c,c,c,0,0,c,c,c,c,c,c,c,0,0
+0,0,0,0,c,0,0,c,0,0,0,0,0,0,0,0
+0,0,0,0,c,0,0,c,0,0,0,0,0,0,0,0
+0,0,0,0,c,0,0,c,0,0,0,0,0,0,0,0
 NAME gymnasium
 PAL 0
 
@@ -220,6 +220,28 @@ TIL 13
 00000000
 00000000
 NAME light_right_bottom
+
+TIL 14
+00000000
+00010000
+00001111
+00000101
+00000001
+00000001
+11111111
+11111111
+NAME treadmill
+
+TIL 15
+00000000
+00100010
+00111110
+00100010
+01000100
+01111100
+01000100
+00000000
+NAME freeweight
 
 TIL a
 00011100
@@ -575,6 +597,98 @@ NAME lounge_doormat_right
 DLG m
 POS 3 11,15
 
+SPR 12
+00011000
+00011000
+01111110
+01011010
+00011000
+00100100
+00100100
+01100110
+>
+00000000
+00011000
+00011000
+01111110
+01011010
+00011000
+00100100
+01100110
+NAME teacher1
+DLG o
+POS 3 10,9
+
+SPR 13
+00000000
+00011000
+10011001
+11111111
+00011000
+00011000
+01111110
+11000011
+>
+01000010
+01011010
+01011010
+00111100
+00011000
+00011000
+01111110
+11000011
+NAME teacher2
+DLG p
+POS 3 11,9
+
+SPR 14
+00000100
+00000111
+00000111
+00000111
+01111111
+00111100
+00011000
+00011000
+>
+00000000
+00000011
+00000011
+00111111
+01111111
+00111100
+00011000
+00011000
+NAME smith_toilet
+DLG s
+POS 2 12,4
+
+SPR 15
+00000000
+00000000
+00000000
+00000000
+00111111
+00100000
+00101111
+00101111
+NAME gym_doormat_left
+DLG t
+POS 4 5,15
+
+SPR 16
+00000000
+00000000
+00000000
+00000000
+11111100
+00000100
+11110100
+11110100
+NAME gym_doormat_right
+DLG u
+POS 4 6,15
+
 SPR A
 00000000
 00011000
@@ -727,7 +841,8 @@ SPR h
 00011000
 00100100
 00100100
-NAME Mr. Smith
+NAME mr. smith
+DLG r
 POS 2 11,6
 
 SPR i
@@ -761,7 +876,8 @@ SPR j
 00100100
 01100110
 NAME big joe
-POS 2 5,5
+DLG q
+POS 4 8,7
 
 SPR k
 00000000
@@ -782,6 +898,7 @@ SPR k
 00011000
 00100100
 NAME little timmy
+DLG n
 POS 1 4,3
 
 SPR l
@@ -934,6 +1051,7 @@ SPR w
 00000000
 00000000
 NAME to_gym_doormat_left
+DLG v
 POS 1 9,0
 
 SPR x
@@ -946,6 +1064,7 @@ SPR x
 00000000
 00000000
 NAME to_gym_doormat_right
+DLG w
 POS 1 10,0
 
 SPR y
@@ -1003,7 +1122,11 @@ It looks to big to be created by a normal middle schooler. A teacher...? Or mayb
 NAME full urinal dialog
 
 DLG 5
+"""
 It's a notebook. "Property of Timmy", it proudly displays on the front.
+{timmy_secret = "true"}
+The first page reads: "Dear Diary, today I had Taco Bell. Who knows what will come of that?"
+"""
 NAME bathroom notebook dialog
 
 DLG 6
@@ -1014,21 +1137,80 @@ It's a roll of toilet paper. You decide to take it.
 NAME toilet paper dialog
 
 DLG 7
-
+"""
+{
+  - joe_accused == false ?
+    You peer into the locker of Big Joe. As you're poking around, a bottle of laxatives falls at your feet. Big Joe was constipated?
+    {joe_secret = true}
+  - else ?
+    You look again in Big Joe's locker. Sure enough, there's a doctor's note that places his return at well past the time the dump was placed. Rats!
+    {joe_vindicated = true}
+}{
+  - timmy_vindicated == true ?
+    {
+      - joe_vindicated == true ?
+        {
+          - smith_vindicated == true ?
+            {
+              - suspects_cleared_flag == false ?
+                 It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
+                "This goes deeper than you think.
+                {shk}1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250{shk}
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
+            }
+            {suspects_cleared_flag = true}
+        }
+    }
+}
+"""
 NAME locker dialog
 
 DLG 8
-Did you hear about the turd in the boy's bathroom? It was definitely Big Joe, no way anyone else could create something so monstrous!
+"""
+{
+  - timmy_accused == true ?
+    Jeff:
+    "Huh? Oh yeah, I've been taking Timmy's lunch money all month. No way he could have made that dump with the amount of calories he's been getting."
+    {timmy_vindicated = true}
+  - else ?
+    Jeff:
+    "What are you looking at, nerd? If you keep making eye contact, I'm going to make you eat what's in that urinal."
+}{
+  - timmy_vindicated == true ?
+    {
+      - joe_vindicated == true ?
+        {
+          - smith_vindicated == true ?
+            {
+              - suspects_cleared_flag == false ?
+                 It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
+                "This goes deeper than you think.
+                {shk}1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250{shk}
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
+            }
+            {suspects_cleared_flag = true}
+        }
+    }
+}
+"""
 NAME hallway person1 dialog
 
 DLG 9
-The turd in the urinal? No way it's Big Joe, it was probably Mr. Smith! He's the only adult who ever uses that bathroom.
+"The turd in the urinal? No way it's Big Joe, it was probably Mr. Smith! He's the only adult who ever uses that bathroom."
 NAME sprite f dialog
 
 DLG a
 """
 It's a note from Mr. Smith. It reads:
-"Won't be here today: be nice to the substitute teacher, Mr. Johnson"
+"Don't mind the new toilet! It'll help me grade papers faster!"
 """
 NAME sprite g dialog
 
@@ -1080,8 +1262,192 @@ DLG m
 {exit "1" 6 1}
 NAME lounge_doormat_right dialog
 
-VAR a
-42
+DLG n
+"""
+Hey there! I'm sure you've seen the news in the bathroom. Isn't that heckin' crazy? {
+  - timmy_secret == false ?
+    Would hate to be the guy accused of creating that monstrosity!
+  - else ?
+    ...You found my notebook? And I'm a suspect for your investigation? This is outrageous! Everyone eats Taco Bell! Besides, that entry is from weeks ago. Jeff over there has taken my lunch money every day since the start of the month, go ask him!
+    {timmy_accused = true}
+}{
+  - timmy_vindicated == true ?
+    {
+      - joe_vindicated == true ?
+        {
+          - smith_vindicated == true ?
+            {
+              - suspects_cleared_flag == false ?
+                 It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
+                "This goes deeper than you think.
+                {shk}1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250{shk}
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
+            }
+            {suspects_cleared_flag = true}
+        }
+    }
+}
+"""
+NAME little timmy dialog
+
+DLG o
+I'm tellin' you Bill, that Mr. Smith just doesn't seem right. He's been subbing for almost 8 months now and still never uses the teacher's bathroom!
+NAME teacher1 dialog
+
+DLG p
+"""
+"I'm with you there, Ted. And when he does use the bathroom, he's in and out in a flash! Too quick to be using a toilet, in my expert opinion."...In and out in a flash? You note to yourself about Mr. Smith's strange bathroom habits.
+{smith_secret = true}
+"""
+NAME teacher2 dialog
+
+DLG q
+"""
+Big Joe:
+"How's it goin'? I'm Big Joe, as you know." {
+  - joe_secret == true ?
+    "...What's that? You think I did the urinal deuce? You found laxatives in my locker? You're a moron, if you checked my locker hard enough you'd have seen my doctor's note, I just got to school 10 minutes ago!"
+    {joe_accused = true}
+  - else ?
+    I hope they catch that urinal dumper soon! I'm the only big thing around here.
+}{
+  - timmy_vindicated == true ?
+    {
+      - joe_vindicated == true ?
+        {
+          - smith_vindicated == true ?
+            {
+              - suspects_cleared_flag == false ?
+                 It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
+                "This goes deeper than you think.
+                {shk}1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250{shk}
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
+            }
+            {suspects_cleared_flag = true}
+        }
+    }
+}
+"""
+NAME big joe dialog
+
+DLG r
+"""
+Mr. Smith:
+"Oh, hello! I'm between classes right now if you need anything!" {
+  - smith_secret == true ?
+    "What's that? The other teachers think I'm weird for using the main bathroom? Well, it's closer to my classroom! ...You're not accusing me of the urinal dump, are you? You're insane! I just got this toilet behind me installed, with a fancy bidet! I've even used it recently, see for yourself." 
+    {smith_accused = true}
+  - else ?
+    "Sure hope they catch that urinal dumper, would be a shame if they went unpunished for their crime!"
+}{
+  - timmy_vindicated == true ?
+    {
+      - joe_vindicated == true ?
+        {
+          - smith_vindicated == true ?
+            {
+              - suspects_cleared_flag == false ?
+                 It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
+                "This goes deeper than you think.
+                {shk}1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250{shk}
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
+            }
+            {suspects_cleared_flag = true}
+        }
+    }
+}
+"""
+NAME Mr. Smith dialog
+
+DLG s
+"""
+{
+  - smith_accused == true ?
+    You take a look inside the toilet. Yup, definitely fresh, vindicating Mr. Smith. Also, there's no way to flush, so it's full.
+    {smith_vindicated = true}
+  - else ?
+    A toilet, that is flapping open by some ethereal force. I'm not looking in there.
+}{
+  - timmy_vindicated == true ?
+    {
+      - joe_vindicated == true ?
+        {
+          - smith_vindicated == true ?
+            {
+              - suspects_cleared_flag == false ?
+                 It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
+                "This goes deeper than you think.
+                {shk}1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250
+                1 Rocket Rd, Hawthorne, CA 90250{shk}
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
+            }
+            {suspects_cleared_flag = true}
+        }
+    }
+}
+"""
+NAME smith_toilet dialog
+
+DLG t
+{exit "1" 9 1}
+NAME gym_doormat_left dialog
+
+DLG u
+{exit "1" 10 1}
+NAME gym_doormat_right dialog
+
+DLG v
+{exit "4" 5 14}
+NAME to_gym_doormat_left dialog
+
+DLG w
+{exit "4" 6 14}
+NAME to_gym_doormat_right dialog
+
+VAR timmy_secret
+false
+
+VAR joe_secret
+false
+
+VAR smith_secret
+false
+
+VAR timmy_accused
+false
+
+VAR joe_accused
+false
+
+VAR smith_accused
+false
+
+VAR timmy_vindicated
+false
+
+VAR joe_vindicated
+false
+
+VAR smith_vindicated
+false
+
+VAR suspects_cleared_flag
+false
 
 
 </script>
@@ -10010,6 +10376,7 @@ CHAR 255
 010010
 000000
 000000
+</script>
 </script>
 
 </head>
