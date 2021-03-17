@@ -47,7 +47,7 @@ e,e,s,n,n,0,0,n,n,0,0,n,n,s,e,e
 e,e,s,w,w,0,0,w,w,0,0,w,w,s,e,e
 e,e,s,g,0,0,0,0,0,0,0,0,g,s,e,e
 e,e,s,g,0,0,0,0,0,0,0,0,g,s,e,e
-o,o,u,g,0,0,0,0,0,0,0,0,g,t,o,o
+o,o,u,g,0,0,1n,0,0,0,0,0,g,t,o,o
 n,n,n,0,0,0,0,0,0,0,0,0,0,n,n,n
 w,w,w,0,0,0,0,0,0,0,0,0,0,w,w,w
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -110,7 +110,7 @@ e,e,s,0,14,0,14,0,14,0,14,0,15,s,e,e
 e,e,s,0,0,0,0,0,0,0,0,0,15,s,e,e
 e,e,s,0,0,0,0,0,0,0,0,15,0,s,e,e
 e,e,s,0,0,0,0,0,0,15,0,0,0,s,e,e
-e,e,s,0,0,0,0,0,0,0,0,0,0,s,e,e
+e,e,s,0,0,0,0,1n,0,0,0,0,0,s,e,e
 e,e,s,0,0,0,0,0,0,0,0,0,0,s,e,e
 e,e,s,0,0,0,0,0,0,0,16,18,0,s,e,e
 e,e,s,0,0,0,0,0,0,0,17,19,1a,s,e,e
@@ -1016,7 +1016,7 @@ NAME arc_left
 
 TIL 1z
 11111000
-111111101
+11111110
 11111110
 11111111
 11111111
@@ -1288,7 +1288,7 @@ SPR e
 01111110
 NAME locker
 DLG 7
-POS 1 12,3
+POS 1 8,6
 
 SPR f
 00000000
@@ -1730,6 +1730,9 @@ DLG 7
           - smith_vindicated == true ?
             {
               - suspects_cleared_flag == false ?
+                 
+                {suspects_cleared_flag = true}
+                
                  It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
                 "This goes deeper than you think.
                 {shk}1 Rocket Rd, Hawthorne, CA 90250
@@ -1737,9 +1740,8 @@ DLG 7
                 1 Rocket Rd, Hawthorne, CA 90250
                 1 Rocket Rd, Hawthorne, CA 90250
                 1 Rocket Rd, Hawthorne, CA 90250{shk}
-                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver
             }
-            {suspects_cleared_flag = true}
         }
     }
 }
@@ -1750,9 +1752,9 @@ DLG 8
 """
 {
   - timmy_accused == true ?
+    {timmy_vindicated = true}
     Jeff:
     "Huh? Oh yeah, I've been taking Timmy's lunch money all month. No way he could have made that dump with the amount of calories he's been getting."
-    {timmy_vindicated = true}
   - else ?
     Jeff:
     "What are you looking at, nerd? If you keep making eye contact, I'm going to make you eat what's in that urinal."
@@ -1764,6 +1766,9 @@ DLG 8
           - smith_vindicated == true ?
             {
               - suspects_cleared_flag == false ?
+                 
+                {suspects_cleared_flag = true}
+                
                  It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
                 "This goes deeper than you think.
                 {shk}1 Rocket Rd, Hawthorne, CA 90250
@@ -1771,8 +1776,7 @@ DLG 8
                 1 Rocket Rd, Hawthorne, CA 90250
                 1 Rocket Rd, Hawthorne, CA 90250
                 1 Rocket Rd, Hawthorne, CA 90250{shk}
-                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
-                {suspects_cleared_flag = true}
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver
             }
         }
     }
@@ -1901,8 +1905,8 @@ Hey there! I'm sure you've seen the news in the bathroom. Isn't that heckin' cra
   - timmy_secret == false ?
     Would hate to be the guy accused of creating that monstrosity!
   - else ?
-    ...You found my notebook? And I'm a suspect for your investigation? This is outrageous! Everyone eats Taco Bell! Besides, that entry is from weeks ago. Jeff over there has taken my lunch money every day since the start of the month, go ask him!
     {timmy_accused = true}
+    ...You found my notebook? And I'm a suspect for your investigation? This is outrageous! Everyone eats Taco Bell! Besides, that entry is from weeks ago. Jeff over there has taken my lunch money every day since the start of the month, go ask him!
 }{
   - timmy_vindicated == true ?
     {
@@ -1911,6 +1915,9 @@ Hey there! I'm sure you've seen the news in the bathroom. Isn't that heckin' cra
           - smith_vindicated == true ?
             {
               - suspects_cleared_flag == false ?
+                 
+                {suspects_cleared_flag = true}
+                
                  It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
                 "This goes deeper than you think.
                 {shk}1 Rocket Rd, Hawthorne, CA 90250
@@ -1918,9 +1925,8 @@ Hey there! I'm sure you've seen the news in the bathroom. Isn't that heckin' cra
                 1 Rocket Rd, Hawthorne, CA 90250
                 1 Rocket Rd, Hawthorne, CA 90250
                 1 Rocket Rd, Hawthorne, CA 90250{shk}
-                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver
             }
-            {suspects_cleared_flag = true}
         }
     }
 }
@@ -1933,8 +1939,8 @@ NAME teacher1 dialog
 
 DLG p
 """
-"I'm with you there, Ted. And when he does use the bathroom, he's in and out in a flash! Too quick to be using a toilet, in my expert opinion."...In and out in a flash? You note to yourself about Mr. Smith's strange bathroom habits.
 {smith_secret = true}
+"I'm with you there, Ted. And when he does use the bathroom, he's in and out in a flash! Too quick to be using a toilet, in my expert opinion."...In and out in a flash? You note to yourself about Mr. Smith's strange bathroom habits.
 """
 NAME teacher2 dialog
 
@@ -1943,8 +1949,8 @@ DLG q
 Big Joe:
 "How's it goin'? I'm Big Joe, as you know." {
   - joe_secret == true ?
-    "...What's that? You think I did the urinal deuce? You found laxatives in my locker? You're a moron, if you checked my locker hard enough you'd have seen my doctor's note, I just got to school 10 minutes ago!"
     {joe_accused = true}
+    "...What's that? You think I did the urinal deuce? You found laxatives in my locker? You're a moron, if you checked my locker hard enough you'd have seen my doctor's note, I just got to school 10 minutes ago!"
   - else ?
     I hope they catch that urinal dumper soon! I'm the only big thing around here.
 }{
@@ -1955,6 +1961,9 @@ Big Joe:
           - smith_vindicated == true ?
             {
               - suspects_cleared_flag == false ?
+                 
+                {suspects_cleared_flag = true}
+                
                  It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
                 "This goes deeper than you think.
                 {shk}1 Rocket Rd, Hawthorne, CA 90250
@@ -1962,9 +1971,8 @@ Big Joe:
                 1 Rocket Rd, Hawthorne, CA 90250
                 1 Rocket Rd, Hawthorne, CA 90250
                 1 Rocket Rd, Hawthorne, CA 90250{shk}
-                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver
             }
-            {suspects_cleared_flag = true}
         }
     }
 }
@@ -1976,8 +1984,10 @@ DLG r
 Mr. Smith:
 "Oh, hello! I'm between classes right now if you need anything!" {
   - smith_secret == true ?
-    "What's that? The other teachers think I'm weird for using the main bathroom? Well, it's closer to my classroom! ...You're not accusing me of the urinal dump, are you? You're insane! I just got this toilet behind me installed, with a fancy bidet! I've even used it recently, see for yourself." 
+     
     {smith_accused = true}
+    
+    "What's that? The other teachers think I'm weird for using the main bathroom? Well, it's closer to my classroom! ...You're not accusing me of the urinal dump, are you? You're insane! I just got this toilet behind me installed, with a fancy bidet! I've even used it recently, see for yourself." 
   - else ?
     "Sure hope they catch that urinal dumper, would be a shame if they went unpunished for their crime!"
 }{
@@ -1988,6 +1998,9 @@ Mr. Smith:
           - smith_vindicated == true ?
             {
               - suspects_cleared_flag == false ?
+                 
+                {suspects_cleared_flag = true}
+                
                  It seems as though all of your prime suspects are cleared! As you're deep in thought, a mysterious figure brushes past you and puts a note in your hand...You read the note silently:
                 "This goes deeper than you think.
                 {shk}1 Rocket Rd, Hawthorne, CA 90250
@@ -1995,9 +2008,8 @@ Mr. Smith:
                 1 Rocket Rd, Hawthorne, CA 90250
                 1 Rocket Rd, Hawthorne, CA 90250
                 1 Rocket Rd, Hawthorne, CA 90250{shk}
-                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver.
+                The note has the same address scrawled many times. You decide to go out the front of the school and talk to the bus driver
             }
-            {suspects_cleared_flag = true}
         }
     }
 }
