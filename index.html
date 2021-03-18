@@ -1670,6 +1670,28 @@ SPR 1e
 NAME buspost_spacex
 POS 6 6,15
 
+SPR 1f
+11111111
+10000001
+10000001
+10000001
+10000001
+10000001
+11111111
+11111111
+>
+11111111
+10000001
+10100001
+10010001
+10100001
+10000001
+11111111
+11111111
+NAME terminal
+DLG 17
+POS 0 10,5
+
 ITM 2
 00000000
 00000000
@@ -1829,6 +1851,10 @@ NAME to_inside_school_left dialog
 DLG 16
 {exit "1" 8 14}
 NAME to_inside_school_right dialog
+
+DLG 17
+(prompt "answer")
+NAME terminal dialog
 
 DLG a
 """
@@ -2114,6 +2140,9 @@ false
 
 VAR checked_turd
 false
+
+VAR answer
+0
 
 
 </script>
@@ -11044,15 +11073,7 @@ CHAR 255
 000000
 </script>
 </script>
-
-</head>
-
-
-<!-- DOCUMENT BODY -->
-<body onload='startExportedGame()'>
-	<!-- GAME CANVAS -->
-	<canvas id='game'></canvas>
-</body>
+</script>
 
 <script>
 /**
@@ -11526,5 +11547,15 @@ Object.defineProperty(exports, '__esModule', { value: true });
 
 }(this.hacks.dialog_prompt = this.hacks.dialog_prompt || {}, window));
 </script>
+
+</head>
+
+
+<!-- DOCUMENT BODY -->
+<body onload='startExportedGame()'>
+	<!-- GAME CANVAS -->
+	<canvas id='game'></canvas>
+</body>
+
 
 </html>
