@@ -308,7 +308,7 @@ ROOM d
 0,0,3f,0,0,3p,0,0,0,0,3p,0,0,3f,0,0
 0,0,3f,0,0,0,0,0,0,0,0,0,0,3e,0,0
 0,0,3f,0,0,0,0,0,0,0,0,0,0,3e,0,0
-0,0,3e,0,3p,0,0,0,0,0,0,3p,0,3e,0,0
+0,0,3e,0,3p,0,0,3p,0,3p,0,3p,0,3e,0,0
 0,0,3e,0,0,0,0,0,0,0,0,0,0,3f,0,0
 0,0,3e,0,0,0,0,0,0,0,0,0,0,3f,0,0
 0,0,3f,0,0,3p,0,0,0,0,3p,0,0,3f,0,0
@@ -331,7 +331,7 @@ ROOM e
 0,3k,3l,0,0,0,3i,3j,3n,3m,0,0,3i,3j,0,3f
 0,0,0,3e,0,0,3k,3l,0,0,3n,3m,3k,3l,0,0
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,3q,0
-0,3r,0,0,3f,0,0,0,0,0,0,3f,0,0,0,0
+0,3r,0,0,3f,0,0,3p,0,3p,0,3f,0,0,0,0
 3r,3r,0,0,0,0,0,0,0,0,0,0,3q,3q,3e,0
 0,0,0,3q,0,0,0,3e,0,0,0,0,3e,0,0,0
 0,3f,3q,0,3e,0,0,0,0,0,0,0,0,0,0,0
@@ -352,7 +352,7 @@ ROOM f
 3f,0,39,3a,0,0,0,39,3a,0,0,0,39,3a,0,0
 0,0,3b,3c,0,3f,0,3b,3c,0,0,0,3b,3c,0,0
 0,0,0,0,0,0,0,0,0,0,0,3e,0,0,3f,0
-3r,0,0,0,0,0,0,0,0,0,0,0,0,3q,0,0
+3r,0,0,0,0,0,0,3p,0,3p,0,0,0,3q,0,0
 0,3r,0,0,0,0,0,0,0,0,0,3f,0,3q,0,0
 3e,3e,3q,0,3e,0,0,3f,3f,0,3e,0,0,3f,0,0
 0,0,3e,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -373,7 +373,7 @@ ROOM g
 0,0,0,0,0,33,34,34,34,34,35,0,0,0,0,0
 0,0,3f,0,0,0,0,0,0,0,0,3f,0,0,0,0
 0,0,0,0,0,0,3f,0,0,0,3f,0,0,0,3f,3f
-0,0,0,0,0,0,0,0,0,0,0,0,0,0,3q,0
+0,0,0,0,0,0,0,3p,0,3p,0,0,0,0,3q,0
 0,3r,0,0,0,0,0,0,0,0,0,0,0,0,3q,0
 3r,3r,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 0,0,0,0,0,3r,3r,0,0,0,0,0,3r,3r,3r,0
@@ -3228,6 +3228,7 @@ SPR 2h
 00000000
 00000000
 NAME landing_to_elon_left
+DLG 2c
 POS c 7,0
 
 SPR 2i
@@ -3240,6 +3241,7 @@ SPR 2i
 00000000
 00000000
 NAME landing_to_elon_right
+DLG 2d
 POS c 8,0
 
 SPR 2j
@@ -3573,11 +3575,15 @@ DLG 28
 """
 Elon Musk:
 It took you long enough to find me. Do I look familiar? I should. I art thou, thou art I. You're the part of me that tried to get away. I'm the part of you that shits in urinals. Come, let us journey together.
+{exit "e" 2 11 "wave"}
 """
 NAME elon_musk_1 dialog
 
 DLG 29
+"""
 Take a look at what I, what we, built. With these martians mining bitcoin, we'll never want for any material goods again. But yet, there's something missing. {shk}Chaos{shk}. Journey with me further in our martian empire.
+{exit "f" 2 11 "wave"}
+"""
 NAME elon_musk2 dialog
 
 DLG a
@@ -3988,12 +3994,23 @@ DLG 1z
 NAME spacex_to_mars_right dialog
 
 DLG 2a
+"""
 Behold, just a small portion of my mighty fleet. No threat intergalactic or otherwise can threaten me. I bring order to the universe. {shk}Yet I crave chaos{shk}. Come with me further yet, to my true crowing achievement.
+{exit "g" 2 12 "wave"}
+"""
 NAME elon_musk3 dialog
 
 DLG 2b
 {shk}Isn't it glorious?{shk} Something so out of place, something so {shk}chaotic{shk}. You are the part of me that tried to resist, to make sense of the chaos. But there is no sense. There is only {shk}CHAOS{shk}.
 NAME elon_musk4 dialog
+
+DLG 2c
+{exit "d" 7 14}
+NAME landing_to_elon_left dialog
+
+DLG 2d
+{exit "d" 8 14}
+NAME landing_to_elon_right dialog
 
 VAR timmy_secret
 false
