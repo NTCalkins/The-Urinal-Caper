@@ -13491,12 +13491,7 @@ var hackOptions = {
 	// note that the character may not always be defined (e.g. during bitsy dialog commands)
 	// so be sure to guard against null data if modifying the implementation
 	onLetter: function (dialogChar) {
-		var character = (dialogChar || {}).char || '';
-		var id = 'dialog-' + character.toLowerCase();
-		if (audioEl) {
-			audioEl.currentTime = 0.0;
-			audioEl.play();
-		}
+	  audioEl.play();
 	},
 };
 
