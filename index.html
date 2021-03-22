@@ -13494,6 +13494,8 @@ var hackOptions = {
   var character = (dialogChar || {}).char || '';
   audioEl.currentTime = 0.0;
   charCounter += 1;
+  if (charCounter == 2)
+    charCount = 0;
   if (character != ' ' && charCounter % 2 == 0)
   {
     audioEl.play();
