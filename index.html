@@ -380,6 +380,56 @@ ROOM g
 NAME mars_statue
 PAL 3
 
+ROOM h
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,3f,0,0,0,0,0,0,0,0,3n,3e,0
+0,0,0,0,0,0,0,0,0,0,0,3q,0,0,0,0
+0,3r,3f,0,0,3q,0,0,0,0,0,0,0,0,0,0
+0,3f,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,3r,0,0,0,3r,0,0
+3f,0,3q,3n,3f,0,0,0,0,0,3r,0,0,0,3n,3e
+0,0,0,3f,0,0,0,0,0,3f,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,3q,0,0,3n,3e,0,0
+0,0,3r,0,0,0,0,3r,3n,3r,0,0,0,0,3e,0
+0,3r,0,0,0,0,0,0,0,0,3r,0,3e,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,0,3q,3e,0,3q,0,3r,0
+0,0,0,0,3f,0,3r,0,0,0,3q,0,0,0,3r,0
+0,0,0,0,0,0,0,0,0,3f,0,0,0,0,3f,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+NAME mars_cave
+ITM 4 1,2
+ITM 4 12,5
+ITM 4 15,3
+ITM 4 10,0
+ITM 4 14,8
+ITM 4 14,13
+ITM 4 2,11
+ITM 4 3,5
+ITM 4 7,7
+ITM 4 0,7
+PAL 3
+
+ROOM i
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,37,38,0,0,0,0,0,0,0
+0,0,0,0,0,0,0,39,3a,0,0,0,0,0,0,0
+0,3e,0,0,0,0,0,39,3a,0,0,0,0,0,3e,0
+0,3e,0,3e,0,0,0,3b,3c,0,0,0,3f,0,0,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,0,0,3e,0,0,0,0,3f,0,0,0,0
+0,0,3f,0,0,0,0,0,0,3f,0,0,0,0,0,0
+0,0,0,0,3f,0,0,0,0,0,3e,0,0,0,3f,0
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+0,0,0,0,3e,0,0,0,0,0,3e,0,0,0,0,3f
+3e,0,0,0,0,3f,0,0,3k,3l,3e,0,0,0,3f,3f
+0,0,0,3f,3f,0,0,0,3i,3j,0,0,3e,0,0,0
+0,0,0,3f,0,0,0,0,3i,3j,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,3i,3j,0,0,0,0,0,0
+0,0,0,0,0,0,0,0,3i,3j,3e,0,0,0,0,3e
+NAME mars_escape
+PAL 3
+
 TIL 10
 00000000
 00000000
@@ -2341,7 +2391,7 @@ SPR A
 01111110
 10111101
 00100100
-POS 0 10,6
+POS g 8,14
 
 SPR b
 00000000
@@ -3332,6 +3382,75 @@ NAME elon_musk4
 DLG 2b
 POS g 8,12
 
+SPR 2p
+11111111
+10000001
+10100001
+10010001
+10100001
+100000011
+111111111
+11111111
+>
+11111111
+10000001
+10000001
+10000001
+10000001
+10000001
+11111111
+11111111
+NAME cave_terminal
+DLG 2f
+POS h 7,0
+
+SPR 2q
+00000000
+00011100
+00001000
+01101000
+01111000
+01100000
+01100000
+10010000
+>
+00000000
+00000000
+00000000
+01100001
+01111111
+01100001
+01100000
+10010000
+DLG 2e
+POS h 9,12
+
+SPR 2r
+00101111
+00101111
+00100000
+00111111
+00000000
+00000000
+00000000
+00000000
+NAME exit_left
+DLG 2g
+POS i 7,5
+
+SPR 2s
+11110100
+111101001
+00000100
+11111100
+00000000
+00000000
+00000000
+00000000
+NAME exit_right
+DLG 2h
+POS i 8,5
+
 ITM 2
 00000000
 00000000
@@ -3364,6 +3483,17 @@ ITM 3
 00100000
 NAME name badge
 DLG 23
+
+ITM 4
+00000000
+00111100
+01000010
+01011010
+01010010
+01000010
+00111100
+00000000
+NAME bitcoin
 
 DLG 4
 """
@@ -4001,7 +4131,10 @@ Behold, just a small portion of my mighty fleet. No threat intergalactic or othe
 NAME elon_musk3 dialog
 
 DLG 2b
-{shk}Isn't it glorious?{shk} Something so out of place, something so {shk}chaotic{shk}. You are the part of me that tried to resist, to make sense of the chaos. But there is no sense. There is only {shk}CHAOS{shk}.
+"""
+{shk}Isn't it glorious?{shk} Something so out of place, something so {shk}chaotic{shk}. You are the part of me that tried to resist, to make sense of the chaos. But there is no sense. There is only {shk}CHAOS{shk}. You are of no use to me, as the part of me that craves order. You shall mine bitcoin for me! GUARDS! Take this man away, and never let him see the light of day.
+{exit "h" 7 14 "fade_b"}
+"""
 NAME elon_musk4 dialog
 
 DLG 2c
@@ -4011,6 +4144,36 @@ NAME landing_to_elon_left dialog
 DLG 2d
 {exit "d" 8 14}
 NAME landing_to_elon_right dialog
+
+DLG 2e
+We're brothers and sisters in binds now. Better collect go collect some bitcoins!
+NAME sprite 2q dialog
+
+DLG 2f
+"""
+BEEP BOOP. FOR ENOUGH BITCOIN I WILL ASSIST IN ESCAPE.{
+  - {item "4"} < 10 ?
+    ERROR: INSUFFICIENT BITCOIN.
+  - else ?
+    10 BITCOIN ACCEPTED. COMMENCING ESCAPE.
+    {exit "i" 8 10 "fade_b"}
+}
+"""
+NAME cave_terminal dialog
+
+DLG 2g
+"""
+{end}
+You jump on board the rocket ship. You're a wanted man now, wanted by the most powerful and chaotic man in the galaxy. Who is also you. What's next, you wonder, as your home galaxy grows smaller and smaller.
+"""
+NAME exit_left dialog
+
+DLG 2h
+"""
+{end}
+You jump on board the rocket ship. You're a wanted man now, wanted by the most powerful and chaotic man in the galaxy. Who is also you. What's next, you wonder, as your home galaxy grows smaller and smaller.
+"""
+NAME exit_right dialog
 
 VAR timmy_secret
 false
