@@ -5893,7 +5893,7 @@ function greaterExp(environment,left,right,onReturn) {
 		});
 	});
 }
-function lessExp(environment,left,right,onReturn) {
+function less*xp(environment,left,right,onReturn) {
 	right.Eval(environment,function(rVal){
 		left.Eval(environment,function(lVal){
 			onReturn( lVal < rVal );
@@ -6004,7 +6004,7 @@ var Environment = function() {
 	operatorMap.set("=", setExp);
 	operatorMap.set("==", equalExp);
 	operatorMap.set(">", greaterExp);
-	operatorMap.set("<", lessExp);
+	operatorMap.set("<", less*xp);
 	operatorMap.set(">=", greaterEqExp);
 	operatorMap.set("<=", lessEqExp);
 	operatorMap.set("*", multExp);
@@ -7503,7 +7503,7 @@ var Parser = function(env) {
 		return ( str === " " || str === "\t" || str === "\n" );
 	}
 
-	function IsExpression(str) {
+	function Is*xpression(str) {
 		var tempState = new ParserState(null, str); // hacky
 		var textOutsideCodeBlocks = "";
 
@@ -7578,7 +7578,7 @@ var Parser = function(env) {
 			state.Step(sequenceType.length);
 			state = ParseSequence(state, sequenceType);
 		}
-		else if (IsLiteral(state.Source()) || IsExpression(state.Source())) {
+		else if (IsLiteral(state.Source()) || Is*xpression(state.Source())) {
 			state = ParseExpression(state);
 		}
 		else {
@@ -10044,7 +10044,7 @@ function serializeWorld(skipFonts) {
 			/* EXITS */
 			for (j in room[id].exits) {
 				var e = room[id].exits[j];
-				if ( isExitValid(e) ) {
+				if ( is*xitValid(e) ) {
 					worldStr += "EXT " + e.x + "," + e.y + " " + e.dest.room + " " + e.dest.x + "," + e.dest.y;
 					if (e.transition_effect != undefined && e.transition_effect != null) {
 						worldStr += " FX " + e.transition_effect;
@@ -10174,7 +10174,7 @@ function serializeDrawing(drwId) {
 	return drwStr;
 }
 
-function isExitValid(e) {
+function is*xitValid(e) {
 	var hasValidStartPos = e.x >= 0 && e.x < 16 && e.y >= 0 && e.y < 16;
 	var hasDest = e.dest != null;
 	var hasValidRoomDest = (e.dest.room != null && e.dest.x >= 0 && e.dest.x < 16 && e.dest.y >= 0 && e.dest.y < 16);
@@ -14645,7 +14645,7 @@ var hackOptions = {
 	// and then specify the sprite ID or name of what to change to. Expand this list to as many rooms as you need.
 	avatarByRoom: {
 		// Note: the entries below are examples that should be removed and replaced with your own room -> sprite mappings
-		'mars_ending1': 'invisible'
+		'mars_ending1': 'invisible',
     'mars_ending2': 'invisible'
 	},
 };
