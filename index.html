@@ -3699,7 +3699,7 @@ DLG 7
 """
 {
   - joe_accused == false ?
-    You peer into the locker of Big Joe. As you're poking around, a bottle of laxatives falls at your feet. Big Joe was constipated?
+    You peer into the locker of Big Joe. As you're poking around, a bottle of laxatives falls at your feet. Big Joe was constipated? {clr1}You should confront him with this.{clr1}
     {joe_secret = true}
   - else ?
     You look again in Big Joe's locker. Sure enough, there's a doctor's note that places his return at well past the time the dump was placed. Rats!
@@ -4057,7 +4057,7 @@ Mr. Smith:
 Oh, hello! I'm between classes right now if you need anything! {
   - smith_secret == true ?
     {smith_accused = true}
-    What's that? The other teachers think I'm weird for using the main bathroom? Well, it's closer to my classroom! ...You're not accusing me of the urinal dump, are you? You're insane! I just got this toilet behind me installed, with a fancy bidet! I've even used it recently, see for yourself. 
+    What's that? The other teachers think I'm weird for using the main bathroom? Well, it's closer to my classroom! ...You're not accusing me of the urinal dump, are you? You're insane! I just got this toilet behind me installed, with a fancy bidet! I've even used it recently, {clr1}see for yourself.{clr1} 
   - smith_vindicated == true ?
     Well, good luck on your investigation!
   - else ?
@@ -4345,8 +4345,10 @@ NAME cave_terminal dialog
 DLG 2g
 """
 You jump on board the rocket ship. You're a wanted man now, wanted by the most powerful and chaotic man in the galaxy. Who is also you. What's next, you wonder, as your home galaxy grows smaller and smaller.
+...
 {exit "j" 6 12 "fade_w"}
-You make it back to school! But how? You don't remember anything after launch. Suddenly, the realization washes over you, and the memory fades...
+You make it back to school! But how? You don't remember anything after launch. Suddenly, the realization washes over you, and the memory fades
+...
 {exit "k" 8 15 "wave"}
 {shk}NO! IT CAN'T BE! It was all an illusion?{shk}
 """
